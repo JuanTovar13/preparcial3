@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { removePokemon } from '../store/analysisSlice'
 
-export default function Analysis() {
+export const Analysis = () => {
   const dispatch = useAppDispatch()
   const list = useAppSelector((s) => s.analysis.list)
 
@@ -44,3 +44,4 @@ export default function Analysis() {
     </div>
   )
 }
+

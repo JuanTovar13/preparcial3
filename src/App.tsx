@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './store'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import PokemonDetail from './pages/PokemonDetail'
-import Analysis from './pages/Analysis'
+import { Navbar } from './components/Navbar'
+import { Home } from './pages/Home'
+import { PokemonDetail } from './pages/PokemonDetail'
+import { Analysis } from './pages/Analysis'
 import './App.css'
 
-function App() {
+export const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -24,4 +24,3 @@ function App() {
   )
 }
 
-export default App

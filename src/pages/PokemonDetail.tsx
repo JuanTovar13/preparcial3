@@ -13,7 +13,7 @@ interface PokemonData {
   abilities: { ability: { name: string } }[]
 }
 
-export default function PokemonDetail() {
+export const PokemonDetail = () => {
   const { name } = useParams<{ name: string }>()
   const dispatch = useAppDispatch()
   const analysisList = useAppSelector((s) => s.analysis.list)
@@ -85,3 +85,4 @@ export default function PokemonDetail() {
     </div>
   )
 }
+

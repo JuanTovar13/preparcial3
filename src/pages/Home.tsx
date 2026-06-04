@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import PokemonCard from '../components/PokemonCard'
+import { PokemonCard } from '../components/PokemonCard'
 
 interface PokemonEntry {
   name: string
   url: string
 }
 
-export default function Home() {
+export const Home = () => {
   const [pokemon, setPokemon] = useState<PokemonEntry[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -52,3 +52,4 @@ export default function Home() {
     </div>
   )
 }
+

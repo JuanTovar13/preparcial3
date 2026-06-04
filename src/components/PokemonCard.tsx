@@ -5,12 +5,12 @@ interface Props {
   url: string
 }
 
-function getIdFromUrl(url: string): number {
+const getIdFromUrl = (url: string): number => {
   const parts = url.replace(/\/$/, '').split('/')
   return parseInt(parts[parts.length - 1])
 }
 
-export default function PokemonCard({ name, url }: Props) {
+export const PokemonCard = ({ name, url }: Props) => {
   const id = getIdFromUrl(url)
   const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
 
@@ -24,3 +24,4 @@ export default function PokemonCard({ name, url }: Props) {
     </div>
   )
 }
+

@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { useAppSelector } from '../store/hooks'
 
-export default function Navbar() {
+export const Navbar = () => {
   const count = useAppSelector((s) => s.analysis.list.length)
 
   return (
@@ -18,3 +18,4 @@ export default function Navbar() {
     </nav>
   )
 }
+
